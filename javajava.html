@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JAVASCRIPT</title>
+</head>
+
+<body>
+
+<form>
+    <legend>How to insert a video and audio</legend>
+</form>
+
+    <video width="1000" height="800" controls>
+        <source src="kaka.mp4" type="video/mp4">
+        Your browser does not support the video tag.
+    </video>
+
+    <audio controls>
+        <source src="aud.mpeg" type="audio/mpeg">
+        Your browser does not support the audio tag.
+    </audio>
+
+    <h1>My first javaS works</h1>
+    <p>I really love what am doing.<br>Dear God, thank you so much. <i>I do not take it forgrantted!</i></p>
+    <!-- this is an inline javascript -->
+    <button onclick='alert("Amen")'>Prayers</button><br><br>
+    <!-- change image after clicking -->
+    <img src="bb1.webp" onclick='src="bb2.webp"'><br><br>
+    <!-- change image size after clicking -->
+    <img src="bb1.webp" onclick='width=200'><br><br>
+    <!-- to make an image move left-right on button click -->
+    <img id="bby" src="bb3.webp"><br><br>
+    <button onclick='bby.src="bb3.webp"'>Left</button>
+    <button onclick='bby.src="bb3.webp"'>Right</button><br><br>
+
+    <!--to display a message using alert and console.log-->
+    <!--creating a variable and displaying it though console.log is not working for sure!-->
+    <script>
+        alert("Message");
+        console.log("Welcome");
+        // creating a variable and calling it
+        let fruits = "banana";
+        alert(fruits);
+
+        let countries = "uganda";
+        console.log(countries);
+    </script>
+
+    <!--to access an element with a unique id -->
+    <p id="p1">Paragraph</p>
+
+    <script>
+        document.getElementById("p1")
+    </script>
+
+    <!-- to change 0r update texts -->
+    <p id="p2">Paragraph2</p>
+
+    <script>
+        document.getElementById("p2").textContent = 'update paragraph';
+    </script>
+
+    <!-- its working and also it updates text incase i add ='thanks' but when i remove the .textcontent it brings an error. -->
+    <h1 id="H1">Wow, its working</h1>
+
+    <script>
+        let gender = document.getElementById('H1').textContent;
+        alert(gender)
+    </script>
+
+    <!-- styling an element through its id -->
+    <h2 id="io">St. Padro Pio of Perltrecina</h2>
+
+    <script>
+        let me = document.getElementById("io")
+        me.style.color = "blue";
+        me.style.border = 'solid';
+    </script>
+
+    <!-- to change the text of an accessed element -->
+    <p id="22">Prayer to my guardian Angel</p>
+    <script>
+        let sam = document.getElementById("22");
+        sam.textContent = 'Angel of God, my guardian dear!';
+        sam.style.fontSize = 'large';
+        sam.style.fontFamily = 'arial';
+    </script>
+
+    <!-- creating functions and how to call it -->
+    <p id="lo">Success oh lord i pray!</p>
+    <button onclick='myfunction()'>BLESSED</button><br><br>
+
+    <script>
+        function myfunction() {
+            let zoo = document.getElementById("lo");
+            zoo.style.color = "pink";
+            zoo.style.border = 'dashed';
+            zoo.style.fontWeight = 'bold';
+        } 
+    </script>
+
+    <button onclick="nameofFunction()">HERE</button>
+    <script>
+        function nameofFunction() {
+            alert('Oh! thank you Jesus!!');
+        }
+    </script>
+
+    <h3 id="dt" onclick="highlight()">TEXT</h3>
+    <script>
+        function highlight() {
+            let stt = document.getElementById("dt");
+            stt.style.backgroundColor = 'lightpink';
+            alert('Marked');
+        }
+    </script>
+
+    <button onclick="prompt()">CLICK</button>
+
+    <script>
+        let user_input = prompt(); 
+    </script>
+
+</body>
+
+</html>
